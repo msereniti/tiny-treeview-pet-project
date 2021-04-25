@@ -1,0 +1,96 @@
+.ttv_root {
+  --borderColor: hsl(0deg 0% 80%);
+  --defaultBackground: hsl(0deg 0% 100%);
+  --hoveredBackground: hsl(0deg 0% 95%);
+  --activeBackground: hsl(0deg 0% 85%);
+
+  --primaryTextColor: hsl(0deg 0% 0%);
+  --secondaryTextColor: hsl(0deg 0% 40%);
+
+  font-size: 14px;
+  color: var(--primaryTextColor);
+}
+
+.ttv_leaf {
+  display: flex;
+  align-items: center;
+  outline: none;
+  transition: background-color 0.1s ease-in-out;
+  background-color: var(--defaultBackground);
+  padding: 4px 8px;
+}
+.ttv_leaf:focus,
+.ttv_leaf:active {
+  background-color: var(--activeBackground);
+}
+.ttv_leaf-id {
+  min-width: 5em;
+  font-size: 0.7em;
+  color: hsl(200deg 100% 40%);
+}
+.ttv_leaf-state {
+  margin: 0 8px;
+  width: 2ch;
+  text-align: center;
+}
+.ttv_leaf-name {
+}
+.ttv_group {
+  display: flex;
+  flex-direction: column;
+}
+.ttv_group-header {
+  display: flex;
+  align-items: center;
+  outline: none;
+  transition: background-color 0.1s ease-in-out;
+  background-color: var(--defaultBackground);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+/* .ttv_group:last-child:not(.ttv_group:first-child) > .ttv_group-content {
+  border-bottom: 0.5px solid var(--borderColor);
+} */
+.ttv_group-opened-header {
+  border-bottom: 0.5px solid var(--borderColor);
+}
+.ttv_group:not(.ttv_group:first-child) {
+  border-top: 0.5px solid var(--borderColor);
+}
+.ttv_group-header:hover {
+  background-color: var(--hoveredBackground);
+}
+.ttv_group-header:focus,
+.ttv_group-header:active {
+  background-color: var(--activeBackground);
+}
+.ttv_group-state {
+  width: 2ch;
+  text-align: center;
+  margin-right: 8px;
+}
+.ttv_group-name {
+}
+.ttv_group-content {
+  margin-left: calc(8px * 2 + 2ch);
+  border-left: 0.5px solid var(--borderColor);
+  display: flex;
+  flex-direction: column;
+}
+.ttv_group-bottom-divider {
+  border-bottom: 0.5px solid var(--borderColor);
+}
+.ttv_group-empty {
+  border-left: none;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  color: var(--secondaryTextColor);
+  outline: none;
+  transition: background-color 0.1s ease-in-out;
+  background-color: var(--defaultBackground);
+}
+
+.ttv_group-empty:focus,
+.ttv_group-empty:active {
+  background-color: var(--activeBackground);
+}

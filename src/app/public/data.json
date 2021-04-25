@@ -1,0 +1,48 @@
+{
+  "name": "Tests",
+  "id": 1,
+  "groupChildren": [
+    {
+      "name": "Task",
+      "id": 2,
+      "groupChildren": [
+        { "name": "Create", "id": 7, "groupChildren": [], "leafChildren": [] },
+        { "name": "Calendar", "id": 8, "groupChildren": [], "leafChildren": [] },
+        { "name": "Collaborator", "id": 9, "groupChildren": [], "leafChildren": [] },
+        {
+          "name": "Invitation",
+          "id": 10,
+          "groupChildren": [],
+          "leafChildren": [
+            {
+              "id": 30063,
+              "name": "Invite user from regular user by 'Add assignee' button on task view",
+              "passed": true
+            },
+            {
+              "id": 30099,
+              "name": "Premium, Invite user from regular user by 'Add assignee' button on task view",
+              "passed": false
+            },
+            {
+              "id": 30100,
+              "name": "Premium, Invite user from domain by regular user in folder share picker",
+              "passed": true
+            },
+            {
+              "id": 30165,
+              "name": "Premium, Invite user not from domain by regular user by share button on taskview",
+              "passed": false
+            }
+          ]
+        }
+      ],
+      "leafChildren": []
+    },
+    { "name": "Account Management", "id": 3, "groupChildren": [], "leafChildren": [] },
+    { "name": "Analytics", "id": 4, "groupChildren": [], "leafChildren": [] },
+    { "name": "Settings Account Subscription Activity Reports", "id": 5, "groupChildren": [], "leafChildren": [] },
+    { "name": "Autotests", "id": 6, "groupChildren": [], "leafChildren": [] }
+  ],
+  "leafChildren": []
+}
